@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Page meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book / Contact | DCU Fitness Hub</title>
+    <meta name="description" content="Book a class or contact DCU Fitness Hub for membership enquiries and general questions.">
+    <meta name="author" content="Abeeha Ijaz">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <div class="logo">
+                <h2>DCU <span>Fitness</span></h2>
+            </div>
+
+            <div class="hamburger" id="hamburger">☰</div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="workout.html">Workout Generator</a></li>
+                <li><a href="classes.html">Classes</a></li>
+                <li><a href="trainers.html">Trainers</a></li>
+                <li><a href="membership.html">Membership</a></li>
+                <li><a href="contact.html">Book / Contact</a></li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+
+<main>
+
+    <!-- Page intro -->
+    <section class="page-hero">
+        <h1>Book a Class or Get in Touch</h1>
+        <p>Reserve your spot, ask a question, or enquire about memberships.</p>
+    </section>
+
+    <!-- Contact / booking form -->
+    <section class="contact-section">
+        <div class="form-container">
+
+            <form id="contactForm">
+
+                <label for="name">Full Name</label>
+                <input type="text" id="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+
+                <label for="reason">Reason for Contact</label>
+                <select id="reason" required>
+                    <option value="">Select an option</option>
+                    <option>Book a Class</option>
+                    <option>Membership Enquiry</option>
+                    <option>General Question</option>
+                </select>
+
+                <label for="classType">Preferred Class (if booking)</label>
+                <select id="classType">
+                    <option value="">Select Class</option>
+                    <option>HIIT</option>
+                    <option>Strength & Conditioning</option>
+                    <option>Yoga & Mobility</option>
+                </select>
+
+                <label for="message">Message</label>
+                <textarea id="message" rows="5"></textarea>
+
+                <button type="submit" class="btn">Submit</button>
+
+                <p id="formMessage"></p>
+
+            </form>
+
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-content">
+        <p>© 2026 DCU Fitness Hub | Designed by Abeeha Ijaz</p>
+
+        <div class="dcu-partner">
+            <p>Proudly located near DCU Campus</p>
+            <img src="images/dcu-logo.png" alt="Dublin City University logo">
+        </div>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

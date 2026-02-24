@@ -1,0 +1,779 @@
+/* Font Import */
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&display=swap');
+
+
+/* Global Reset */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #0f0f0f;
+    color: white;
+    line-height: 1.6;
+}
+
+
+/* Nav Bar */
+
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    padding: 18px 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+.nav-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h2 {
+    font-size: 26px;
+}
+
+.logo span {
+    color: orange;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+.nav-links a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: orange;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+/* Join Now Button */
+
+
+.nav-btn {
+    background-color: orange;
+    color: black !important;
+    padding: 10px 22px;
+    border-radius: 6px;
+    font-weight: bold;
+    box-shadow: 0 0 12px rgba(255, 140, 0, 0.6);
+    animation: pulseGlow 2s infinite;
+}
+
+.nav-btn::after {
+    display: none;
+}
+
+@keyframes pulseGlow {
+    0% { box-shadow: 0 0 10px rgba(255, 140, 0, 0.6); }
+    50% { box-shadow: 0 0 22px rgba(255, 140, 0, 1); }
+    100% { box-shadow: 0 0 10px rgba(255, 140, 0, 0.6); }
+}
+
+.nav-btn:hover {
+    background-color: white;
+    transform: translateY(-3px);
+}
+
+
+/* Hero Section */
+
+
+.hero {
+    margin-top: 90px;
+    height: 90vh;
+    background:
+        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+        url('../images/gym.jpg') center/cover no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-text h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 64px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+    background: linear-gradient(90deg, orange, #ff4500, orange);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: gradientMove 3s linear infinite;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+
+/* Primary Button */
+
+
+.btn {
+    background: orange;
+    color: black;
+    padding: 14px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: 0.3s ease;
+    box-shadow: 0 8px 20px rgba(255, 140, 0, 0.4);
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+
+/* About Section */
+
+
+.about {
+    padding: 100px 50px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+    color: orange;
+}
+
+.features {
+    display: flex;
+    gap: 30px;
+}
+
+.feature-card {
+    background: #1a1a1a;
+    padding: 40px 30px;
+    border-radius: 12px;
+    transition: 0.4s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    background: orange;
+    color: black;
+}
+
+
+/* Stats Section */
+
+
+.stats-section {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 100px 20px;
+    background: #121212;
+    flex-wrap: wrap;
+}
+
+.stat {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.stat::before {
+    content: "";
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 1.5px solid orange;
+    box-shadow:
+        0 0 8px rgba(255,140,0,0.6),
+        inset 0 0 10px rgba(255,140,0,0.3);
+}
+
+.stat h3 {
+    font-size: 40px;
+    color: orange;
+}
+
+.stat p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+
+/* Video Section */
+
+
+.video-section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    height: 400px;
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Testimonials */
+
+
+.testimonials {
+    padding: 80px 50px;
+    text-align: center;
+    background: #141414;
+}
+
+.testimonial-card {
+    max-width: 600px;
+    margin: 20px auto;
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+
+/* FAQ Section */
+
+
+.faq-section {
+    padding: 80px 20px;
+    background: #111;
+    text-align: center;
+}
+
+.faq-item {
+    max-width: 700px;
+    margin: 15px auto;
+    text-align: left;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 15px;
+    background: #1a1a1a;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.faq-question:hover {
+    background: orange;
+    color: black;
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px;
+    background: #1a1a1a;
+    border-radius: 6px;
+    margin-top: 5px;
+}
+
+
+/* Scroll Reveal Effect */
+
+
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Delay */
+
+
+.reveal:nth-child(1) { transition-delay: 0.1s; }
+.reveal:nth-child(2) { transition-delay: 0.2s; }
+.reveal:nth-child(3) { transition-delay: 0.3s; }
+.reveal:nth-child(4) { transition-delay: 0.4s; }
+.reveal:nth-child(5) { transition-delay: 0.5s; }
+
+
+/* Footer */
+
+
+footer {
+    background: black;
+    padding: 30px;
+}
+
+.footer-content {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+/* Responsiveness */
+
+
+@media (max-width: 900px) {
+    .features {
+        flex-direction: column;
+    }
+
+    .hero-text h1 {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .hero {
+        background-attachment: scroll;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+    }
+}
+/* Footer Logo */
+
+
+.dcu-partner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dcu-partner img {
+    width: 40px;
+    height: auto;
+    opacity: 0.8;
+    transition: 0.3s ease;
+}
+
+.dcu-partner img:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/* Effects */
+
+
+a:focus,
+button:focus {
+    outline: 2px solid orange;
+    outline-offset: 3px;
+}
+button,
+.nav-links a {
+    min-height: 44px;
+}
+
+/* Effects 2 */
+
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Classes Hero Section */
+
+
+.classes-hero {
+    margin-top: 90px;
+    height: 45vh;
+    background:
+        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+        url('../images/gym.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.classes-hero h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 48px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+    background: linear-gradient(90deg, orange, #ff4500, orange);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: classesGradientMove 4s linear infinite;
+}
+
+@keyframes classesGradientMove {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
+}
+
+.classes-hero p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+
+/* Class Schedule Section */
+
+
+.schedule-section {
+    padding: 100px 20px;
+    background: #111;
+    text-align: center;
+}
+
+.schedule-section h2 {
+    color: orange;
+    margin-bottom: 50px;
+    font-size: 32px;
+}
+
+.schedule-table-container {
+    max-width: 1100px;
+    margin: auto;
+    overflow-x: auto;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #1a1a1a;
+    min-width: 700px;
+}
+
+.schedule-table th,
+.schedule-table td {
+    padding: 18px;
+    border: 1px solid #2a2a2a;
+}
+
+.schedule-table th {
+    background: orange;
+    color: black;
+    font-weight: bold;
+}
+
+.schedule-table td:first-child {
+    font-weight: bold;
+    color: orange;
+}
+
+.schedule-table tr:hover {
+    background: #222;
+}
+
+
+/* Class Cards */
+
+
+.class-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 320px;
+}
+
+.class-card p {
+    flex-grow: 1;
+}
+
+.card-btn {
+    margin-top: 25px;
+}
+
+
+/* Mobile Responsiveness */
+
+
+@media (max-width: 768px) {
+
+    .classes-hero {
+        height: 35vh;
+    }
+
+    .classes-hero h1 {
+        font-size: 32px;
+    }
+
+    .schedule-section {
+        padding: 70px 15px;
+    }
+
+    .schedule-table th,
+    .schedule-table td {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+}
+/* Generic */
+
+
+.page-hero {
+    margin-top: 90px;
+    height: 40vh;
+    background:
+        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+        url('../images/gym.jpg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.page-hero h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 48px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+
+    background: linear-gradient(90deg, orange, #ff4500, orange);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: pageGradientMove 4s linear infinite;
+}
+
+@keyframes pageGradientMove {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
+}
+
+.page-hero p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+
+/* Workout Section */
+
+
+.workout-section {
+    padding: 100px 20px;
+    text-align: center;
+    background: #111;
+}
+
+.workout-result {
+    margin-top: 40px;
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Contact Form */
+
+
+.contact-section {
+    padding: 100px 20px;
+    background: #111;
+}
+
+#contactForm {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#contactForm input,
+#contactForm select,
+#contactForm textarea {
+    padding: 14px;
+    border-radius: 6px;
+    border: none;
+    background: #1a1a1a;
+    color: white;
+}
+
+/* Trainers Section */
+
+
+.trainers-section {
+    padding: 100px 20px;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.trainer-card {
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 12px;
+    width: 280px;
+    transition: 0.4s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+}
+
+.trainer-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.trainer-card h3 {
+    color: orange;
+    margin-bottom: 10px;
+}
+
+.trainer-card:hover {
+    transform: translateY(-10px);
+    background: #222;
+}
+
+/* Membership Section */
+
+
+.membership-section {
+    padding: 100px 20px;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.pricing-card {
+    background: #1a1a1a;
+    padding: 40px 30px;
+    border-radius: 12px;
+    width: 280px;
+    transition: 0.4s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+}
+
+.pricing-card h3 {
+    margin-bottom: 20px;
+    color: orange;
+}
+
+.price {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.price span {
+    font-size: 16px;
+    opacity: 0.7;
+}
+
+.pricing-card ul {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.pricing-card ul li {
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    background: #222;
+}
+
+/* Highlight Middle Plan */
+.featured {
+    border: 2px solid orange;
+    transform: scale(1.05);
+}

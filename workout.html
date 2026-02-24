@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Page meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Generator | DCU Fitness Hub</title>
+    <meta name="description" content="Generate a random workout instantly using our interactive workout generator.">
+    <meta name="author" content="Abeeha Ijaz">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <div class="logo">
+                <h2>DCU <span>Fitness</span></h2>
+            </div>
+
+            <div class="hamburger" id="hamburger">☰</div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="workout.html">Workout Generator</a></li>
+                <li><a href="classes.html">Classes</a></li>
+                <li><a href="trainers.html">Trainers</a></li>
+                <li><a href="membership.html">Membership</a></li>
+                <li><a href="contact.html">Book / Contact</a></li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+
+<main>
+
+    <!-- Page intro -->
+    <section class="page-hero">
+        <h1>Workout Generator</h1>
+        <p>Generate a random exercise and challenge yourself today.</p>
+    </section>
+
+    <!-- Generator area -->
+    <section class="workout-section">
+
+        <button id="generateWorkoutBtn" class="btn">
+            Generate Workout
+        </button>
+
+        <div id="workoutResult" class="workout-result">
+            <p>Your workout will appear here...</p>
+        </div>
+
+        <!-- Simple workout history -->
+        <div id="workoutHistory" class="workout-history">
+            <h3>Recent Workouts</h3>
+            <ul id="historyList"></ul>
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-content">
+        <p>© 2026 DCU Fitness Hub | Designed by Abeeha Ijaz</p>
+
+        <div class="dcu-partner">
+            <p>Proudly located near DCU Campus</p>
+            <img src="images/dcu-logo.png" alt="Dublin City University logo">
+        </div>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
